@@ -1,0 +1,135 @@
+body {
+    font-family: 'pusabregular';
+    background-image: linear-gradient(#0065FD, #002E73);
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media screen and (min-width: 25em){
+    #songname { font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) ); }
+}
+
+h1 {
+    color: white;
+    font-size: 6vh;
+    line-height: 100%;
+    white-space: nowrap;
+    -webkit-text-stroke-width: 0.25vh;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0.375vh 0.375vh 0vh rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: rgb(255, 200, 0);
+    font-size: 8vh;
+    -webkit-text-stroke-width: 0.265vh;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0.35vh 0.35vh 0.1vh rgba(0, 0, 0, 0.3);
+}
+
+.box {
+    border: 0 solid transparent;
+    border-radius: 2vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 75vh;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+    float: left;
+}
+
+.center {
+    text-align: center;
+    max-width: 100%;
+}
+
+p {
+    font-family: aller, helvetica, arial;
+    color: white;
+    font-size: 2.9vh;
+    word-break: break-word;
+}
+
+.pre {
+    white-space: pre;
+}
+
+.songBox {
+    border: 2.5vh solid transparent;
+    border-radius: 3vh;
+    background-color: #995533;
+    border-image: url(assets/brownbox.png) 10% round;
+}
+
+.slsm {
+    font-size: 6vh;
+    -webkit-text-stroke-width: 0.25vh;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0.35vh 0.35vh 0vh rgba(0, 0, 0, 0.3);
+}
+
+.sm {
+    font-size: 5vh;
+    -webkit-text-stroke-width: 0.20vh;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0.35vh 0.35vh 0vh rgba(0, 0, 0, 0.3);
+}
+
+h1, h2, h3 {
+    font-family: 'pusabregular', Arial;
+    font-weight: normal;
+    margin: 0% 0%;
+    letter-spacing: -0.01em;
+    -webkit-text-size-adjust: 100%;
+}
+
+.spaced {
+    margin-bottom: 2%;
+}
+
+.inline {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-text-stroke-width: inherit;
+    -webkit-text-stroke-color: inherit;
+    text-shadow: inherit;
+}
+
+.gdButton:active, .gdButton:focus-visible, a:focus-visible .gdButton {
+    animation: bounceButton 0.25s ease-in-out forwards;
+}
+
+.gdButton {
+    cursor: pointer;
+    z-index: 1;
+    user-select: none;
+    pointer-events: all;
+    transition-duration: 0.07s;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes bounceButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.12);
+    }
+    75% {
+        transform: scale(1.06);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
