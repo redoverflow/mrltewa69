@@ -25,9 +25,18 @@ let rawlevels = "";
 let found = false;
 
 function thing() {
+    let exit = false;
     page = page + 1;
     lvlname.innerHTML = "Loading..."
     let ws = new WebSocket('ws://localhost:8765');
+
+    ws.onerror = () => {
+        desc.innerHTML = 'Connection error. Make sure you can access redoverflow.sudocode1.xyz'; 
+        return exit = true;
+    }
+
+    if (exit) return;
+
     ws.onopen = () => {ws.send('hey give me the funni level data from page .'+page.toString())};
     ws.onmessage = s => {
         rawlevels = s.data;
